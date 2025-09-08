@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>اسمك — مطور</title>
+  <title>بورتفوليو — اسمك</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body dir="rtl">
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <h1 id="brand-name">اسمك</h1>
-        <p id="brand-sub">Android Developer & Software Engineer</p>
+        <h1>اسمك</h1>
+        <p>Android Developer & Software Engineer</p>
       </div>
       <nav class="nav">
         <a href="#about">About</a>
@@ -24,112 +25,101 @@
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h2 id="hero-title">Passionate about building innovative mobile applications with Kotlin</h2>
-          <p id="hero-sub">Connect &nbsp; • &nbsp; View Projects</p>
-          <div class="hero-contacts">
-            <a href="mailto:you@example.com" class="btn">Send Email</a>
-            <a href="#projects" class="btn ghost">View Projects</a>
-          </div>
-        </div>
-        <div class="hero-image">
-          <!-- صورتك الشخصية -->
-          <img src="profile.jpg" alt="My Photo">
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section about">
-      <div class="container">
-        <h3>About Me</h3>
-        <p>اكتب هنا نبذة قصيرة عن نفسك...</p>
-        <div class="stats">
-          <div class="stat">
-            <h4>3</h4>
-            <p>Projects Completed</p>
-          </div>
-          <div class="stat">
-            <h4>2</h4>
-            <p>Years Learning</p>
-          </div>
-          <div class="stat">
-            <h4>5+</h4>
-            <p>Technologies</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section skills">
-      <div class="container">
-        <h3>Technical Skills</h3>
-        <!-- skills هتضيفها هنا -->
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="section projects">
-      <div class="container">
-        <h3>Featured Projects</h3>
-        <div class="projects-grid">
-
-          <!-- Project 1 -->
-          <article class="project-card">
-            <img src="project1.jpg" alt="Project 1 preview" class="project-img">
-            <h4>SQL Database Management System</h4>
-            <p class="meta">November 2024 — C# Windows Forms / SQL Server</p>
-            <p>Built a comprehensive Windows Forms app with CRUD, reporting and validation.</p>
-            <a class="btn small" href="#">View</a>
-          </article>
-
-          <!-- Project 2 -->
-          <article class="project-card">
-            <img src="project2.jpg" alt="Project 2 preview" class="project-img">
-            <h4>Backend API System</h4>
-            <p class="meta">December 2024 — C# .NET</p>
-            <p>RESTful API, JWT auth, clean architecture and logging.</p>
-            <a class="btn small" href="#">View</a>
-          </article>
-
-          <!-- Project 3 -->
-          <article class="project-card">
-            <img src="project3.jpg" alt="Project 3 preview" class="project-img">
-            <h4>Personal Portfolio Website</h4>
-            <p class="meta">January 2025 — HTML/CSS/JS</p>
-            <p>Responsive portfolio with animations and performance optimizations.</p>
-            <a class="btn small" href="#">View</a>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section contact">
-      <div class="container">
-        <h3>Let's Connect</h3>
-        <p>Send Email — LinkedIn — GitHub</p>
-        <div class="contact-links">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h2>Passionate about building innovative mobile applications with Kotlin</h2>
+        <p>Connect • View Projects</p>
+        <div class="hero-contacts">
           <a href="mailto:you@example.com" class="btn">Send Email</a>
-          <a href="#" class="btn ghost">LinkedIn</a>
-          <a href="#" class="btn ghost">GitHub</a>
+          <a href="#projects" class="btn ghost">View Projects</a>
         </div>
       </div>
-    </section>
-  </main>
+      <div class="hero-image">
+        <img src="profile.jpg" alt="My Photo">
+      </div>
+    </div>
+  </section>
 
+  <!-- About -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h3>About Me</h3>
+      <p>اكتب هنا نبذة قصيرة عن نفسك...</p>
+      <div class="stats">
+        <div class="stat"><h4>3</h4><p>Projects Completed</p></div>
+        <div class="stat"><h4>2</h4><p>Years Learning</p></div>
+        <div class="stat"><h4>5+</h4><p>Technologies</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <h3>Technical Skills</h3>
+      <ul class="skills-list">
+        <li>Kotlin</li>
+        <li>Java</li>
+        <li>SQL</li>
+        <li>C#</li>
+        <li>HTML / CSS / JS</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <h3>Featured Projects</h3>
+      <div class="projects-grid">
+
+        <article class="project-card">
+          <img src="project1.jpg" alt="Project 1">
+          <h4>SQL Database Management System</h4>
+          <p class="meta">November 2024 — C# / SQL Server</p>
+          <p>Windows Forms app with CRUD, reporting and validation.</p>
+        </article>
+
+        <article class="project-card">
+          <img src="project2.jpg" alt="Project 2">
+          <h4>Backend API System</h4>
+          <p class="meta">December 2024 — C# .NET</p>
+          <p>RESTful API, JWT auth, clean architecture and logging.</p>
+        </article>
+
+        <article class="project-card">
+          <img src="project3.jpg" alt="Project 3">
+          <h4>Personal Portfolio Website</h4>
+          <p class="meta">January 2025 — HTML/CSS/JS</p>
+          <p>Responsive portfolio with animations and performance optimizations.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h3>Let's Connect</h3>
+      <div class="contact-links">
+        <a href="mailto:you@example.com" class="btn">Send Email</a>
+        <a href="#" class="btn ghost">LinkedIn</a>
+        <a href="#" class="btn ghost">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <p>© <span id="year"></span> اسمك. Built with passion for Web Development and clean code.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
+      
