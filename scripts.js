@@ -1,18 +1,36 @@
-var typed = new Typed(".text", {
-    strings: ["Programming" , "Cybersecurity" , "Web Development"],
-    typeSpeed:100,
-    backSpeed:100,
-    backDelay:1000,
-    loop:true
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
 
+// Projects hover effect (extra)
+const projects = document.querySelectorAll('.project');
+projects.forEach(project => {
+    project.addEventListener('mouseenter', () => {
+        project.style.transform = 'translateY(-10px) scale(1.03)';
+        project.style.transition = '0.3s';
+    });
+    project.addEventListener('mouseleave', () => {
+        project.style.transform = 'translateY(0) scale(1)';
+    });
+});
 
-const toTop = document.querySelector(".top");
-window.addEventListener("scroll",() =>{
-    if (window.pageYOffset > 100){
-        toTop.classList.add("active");
-    }
-    else{
-        toTop.classList.remove("active");
-    }
-})
+// Scroll animation for sections
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const triggerBottom = window.innerHeight / 5 * 4;
+
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if(sectionTop < triggerBottom) {
+            section.classList.add('show');
+        } else {
+            section.classList.remove('show');
+        }
+    });
+});
