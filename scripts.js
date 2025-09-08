@@ -1,30 +1,37 @@
-// تحديث السنة تلقائي
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("year").textContent = new Date().getFullYear();
-});
+document.addEventListener('DOMContentLoaded', () => {
 
-// سكرول ناعم عند الضغط على الروابط
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth"
+  /* ===== Scroll Animation for Sections ===== */
+  const sections = document.querySelectorAll('section');
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.25 });
+
+  sections.forEach(section => observer.observe(section));
+
+
+  /* ===== Smooth Scroll for Nav Links ===== */
+  const navLinks = document.querySelectorAll('nav a');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const targetID = link.getAttribute('href');
+      const targetSection = document.querySelector(targetID);
+      if(targetSection){
+        window.scrollTo({
+          top: targetSection.offsetTop - 50,
+          behavior: 'smooth'
+        });
+      } else {
+        window.location.href = targetID; // external pages
+      }
     });
   });
-});
 
-// Fade-in عند Scroll
-const faders = document.querySelectorAll(".fade-in");
-
-const appearOnScroll = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.2 });
-
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
 });
