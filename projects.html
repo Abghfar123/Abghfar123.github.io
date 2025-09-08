@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yousef Portfolio - Projects</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المشاريع</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">عنّي</a></li>
+                <li><a href="projects.html">المشاريع</a></li>
+                <li><a href="contact.html">اتصل بي</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section id="projects">
-    <div class="container">
-      <h2>Featured Projects</h2>
-      <div class="project-cards">
-        <div class="project-card">
-          <img src="project1.jpg" alt="Project 1">
-          <h3>SQL Database Management System</h3>
-        </div>
-        <div class="project-card">
-          <img src="project2.jpg" alt="Project 2">
-          <h3>Backend API System</h3>
-        </div>
-        <div class="project-card">
-          <img src="project3.jpg" alt="Project 3">
-          <h3>Portfolio Website</h3>
-        </div>
-      </div>
-    </div>
-  </section>
+    <main>
+        <section id="projects">
+            <h2>مشاريعي</h2>
+            <div class="project">
+                <img src="images/project1.jpg" alt="مشروع 1">
+                <h3>نظام إدارة قواعد البيانات</h3>
+                <p>تطبيق Windows Forms متصل بقاعدة بيانات SQL Server لإدارة بيانات الأعمال.</p>
+            </div>
+            <div class="project">
+                <img src="images/project2.jpg" alt="مشروع 2">
+                <h3>نظام API Backend</h3>
+                <p>نظام RESTful API باستخدام C# .NET لإدارة المستخدمين والبيانات.</p>
+            </div>
+            <div class="project">
+                <img src="images/project3.jpg" alt="مشروع 3">
+                <h3>محفظتي الشخصية</h3>
+                <p>موقع ويب تفاعلي يعرض مهاراتي ومشاريعي باستخدام HTML وCSS وJavaScript.</p>
+            </div>
+        </section>
+    </main>
 
-  <script src="scripts.js"></script>
+    <footer>
+        <p>&copy; 2025 محمود أبغفار</p>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
